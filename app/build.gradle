@@ -25,7 +25,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    //implementation 'androidx.core:core-ktx:1.1.0'
 
     implementation 'co.trikita:anvil-sdk15:0.5.2'
     implementation 'co.trikita:anvil-design:0.5.2'
