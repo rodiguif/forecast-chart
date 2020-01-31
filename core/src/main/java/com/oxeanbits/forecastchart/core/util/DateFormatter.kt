@@ -4,6 +4,7 @@ import org.threeten.bp.Instant
 import org.threeten.bp.LocalDate
 import org.threeten.bp.LocalDateTime
 import org.threeten.bp.ZoneOffset
+import org.threeten.bp.LocalTime
 import org.threeten.bp.format.DateTimeFormatter
 
 
@@ -12,7 +13,7 @@ object DateFormatter{
     const val DEFAULT_DATE_FORMAT: String = "dd/MM/yyyy"
 
     fun stringToTimestamp(date: String): Float{
-        return LocalDate.parse(date).atStartOfDay()
+        return LocalDate.parse(date).atTime(LocalTime.MIDNIGHT)
             .toInstant(ZoneOffset.UTC).epochSecond.toFloat()
     }
 
